@@ -547,6 +547,3 @@ elif mode == "📊 Insights":
     with cols[3]:
         st.markdown('<div class="pill pill-critical">CRITICAL</div>', unsafe_allow_html=True)
         st.write("Highest-risk suspicious transactions.")
-
-    st.markdown("### UI Enhancements Included")
-   
