@@ -200,7 +200,6 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("### ⚙️ Controls")
 
 limit = st.sidebar.slider("Max Transactions", 20, 5000, 200, step=20)
-auto_refresh = st.sidebar.checkbox("Auto refresh every 60 seconds", value=False)
 refresh_btn = st.sidebar.button("🔁 Refresh Data")
 severity_filter = st.sidebar.multiselect(
     "Filter Severity",
@@ -382,11 +381,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
-
-# Optional auto refresh using rerun
-if auto_refresh:
-    st.caption("Auto refresh is enabled. Refreshing every 60 seconds.")
-    st.autorefresh(interval=60_000, key="crypto_sentinel_refresh")
 
 # ----------------------------
 # Mode: Real-Time Monitoring
